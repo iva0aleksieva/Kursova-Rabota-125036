@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Next Read</title>
+	<link rel="stylesheet" type="text/css" href="styles/style-home.css" />
+	<script type="module" src="index.mjs" defer></script>
+</head>
+
+<body>
+
+	<div class="nav-container">
+		<div class="logo">
+			My Next Read
+		</div>
+		<ul class="nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Get Recommendation!</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="profile">My Profile</a>
+			</li>
+		</ul>
+	</div>
+	<div class="banner">
+		<div class="text-banner">
+			<p>Welcome to MyNextRead!<br>
+				Discover the next book on your to-read list with our book recommendation generator. Simply input your
+				favorite genres and let us do our magic. You can even take a quiz for a more personalized experience!
+				Whether you're into thrilling mysteries, heartwarming romances, or thought-provoking non-fiction, we’ve
+				got you covered! Unleash your inner bookworm and embark on a literary adventure today!</p>
+		</div>
+		<div class="covers">
+			<span class="cover"><img src="assets\sample-book-covers\peter.jpg"></span>
+			<span class="cover"><img src="assets\sample-book-covers\peach.jpg"></span>
+			<span class="cover"><img src="assets\sample-book-covers\tess.jpg"></span>
+			<button type="button"><a href="#pick-genre">Find your next read!</a></button>
+		</div>
+	</div>
+	<div class="genres" id="pick-genre">
+		<form>
+			<fieldset class="sec">
+				<div class="checkbox">
+					<input type="checkbox" name="rom" id="Romance" value="romance">
+					<label for="rom">Romance</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="fan" id="Fantasy" value="fantasy">
+					<label for="fan">Fantasy</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="sf" id="Science Fiction" value="science-fiction">
+					<label for="sf">Science Fiction</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="par" id="Paranormal" value="paranormal">
+					<label for="par">Paranormal</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="mys" id="Mystery" value="mystery">
+					<label for="mys">Mystery</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="hor" id="Horror" value="horror">
+					<label for="hor">Horror</label>
+				</div>
+				<br>
+			</fieldset>
+
+			<fieldset class="sec">
+				<div class="checkbox">
+					<input type="checkbox" name="th" id="Thriller" value="thriller">
+					<label for="th">Thriller/Suspense</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="act" id="Adventure" value="adventure">
+					<label for="act">Adventure</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="his" id="Historical Fiction" value="historical_fiction">
+					<label for="his">Historical Fiction</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="conf" id="Contemporary Fiction" value="contemporary_fiction">
+					<label for="conf">Contemporary Fiction</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="clas" id="Classic" value="classic">
+					<label for="clas">Classic</label>
+				</div>
+				<br>
+				<div class="checkbox">
+					<input type="checkbox" name="nf" id="Non-fiction" value="non-fiction">
+					<label for="nf">Non-fiction</label>
+				</div>
+				<br>
+			</fieldset>
+			<div class="sub-btn">
+				<button id="rec-btn" type="submit">Generate Reccomendation!</button>
+			</div>
+		</form>
+		<div class="recc">
+			<div class="sec">
+				<span class="cover"><img id="rec-cover" src="assets\decorative-images\placeholder-light-01.png"></span>
+				<button class="add-btn">Add to my List</button>
+			</div>
+			<div class="sec">
+				<h2 id="title">Title</h2>
+				<h4 id="author">Author</h4>
+				<p id="description">Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</div>
+	<div class="loading-screen d-none">
+		<img class="loading-img" src="assets\decorative-images\penguin.gif" alt="">
+		<h2 class="loading-text">Getting your book...</h2>
+		<div class="loading"></div>
+	</div>
+</body>
+
+</html>

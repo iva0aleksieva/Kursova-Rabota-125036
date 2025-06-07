@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    width: 100%;
+    margin: 0px auto;
+    font-family: "Exo 2", sans-serif;
+    background: #FFF4EA;
+    color: #FFF4EA;
+    overflow: hidden;
+}
+
+.nav-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #435B66;
+    padding: 20px;
+    margin: 0px;
+}
+
+.logo {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-left: 30px;
+    padding-right: 500px;
+    color: #FFF4EA;
+
+}
+
+.nav {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+}
+
+.nav-item {
+    box-sizing: border-box;
+    margin: 0px 20px;
+}
+
+.nav-link {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FADFA1;
+    padding: 36px;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.nav-link:hover {
+    background: #FADFA1;
+    color: #435B66;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container img {
+    width: 300px;
+    padding: 50% 30px 20px;
+}
+
+.banner{
+    margin: 0px auto;
+    width: 300px;
+    background: #C96868;
+    padding: 10% 10% 100%
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4%;
+}
+
+input {
+    border: 2px solid #435B66;
+    padding: 15px;
+    border-radius: 8px;
+    background: #FFF4EA;
+    margin: 10px 0;
+}
+
+label {
+    color: #070f13;
+    font-weight: 400;
+}
+
+button[type="submit"] {
+	display: flex;
+	background: #FADFA1;
+	color: #435B66;
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: bold;
+    padding: 10px 20px;
+    width: 30%;
+}
+button[type="submit"]:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.register-form a{
+    color: white;
+    padding-bottom: 10px
+}
+.register-form a:hover{
+    color: rgb(24, 37, 43);
+}

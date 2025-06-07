@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Next Read</title>
+    <link rel="stylesheet" type="text/css" href="styles/style-profile.css" />
+    <script type="module" src="profile.mjs" defer></script>
+</head>
+
+<body>
+
+    <div class="nav-container">
+        <div class="logo">
+            My Next Read
+        </div>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" id="home">Get Recommendation!</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">My profile</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+        <div class="account-info">
+            <div class="profile-circle">
+                <img id="profile-avatar" src="assets\avatar-images\avatars_bee.png" alt="">
+            </div>
+            <h2>Username</h2>
+            <button id="sign-out">Sign out</button>
+        </div>
+        <div class="reading-list">
+            <div class="list-container">
+                <h3>My To-Read List</h3>
+                <table id="reading-list">
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
