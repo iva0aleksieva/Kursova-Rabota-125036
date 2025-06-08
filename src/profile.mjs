@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     let usernameText = document.querySelector('h2')
     usernameText.innerText = username;
     let avatarImg = document.querySelector("#profile-avatar");
-    avatarImg.src = `assets\\avatar-images\\avatars_${avatar}.png`
+    avatarImg.src = `../assets/avatar-images/avatars_${avatar}.png`
 
     //keep user info when switching to the home page
     let homeLink = document.querySelector('#home');

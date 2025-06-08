@@ -11,7 +11,7 @@ app.use(express.json()); // for parsing JSON POST requests
 
 //returns a json of the first sheet
 app.get('/read-excel-users', (req, res) => {
-    const workbook = XLSX.readFile('./account-data.xlsx');
+    const workbook = XLSX.readFile('./src/account-data.xlsx');
     const sheetNames = workbook.SheetNames;
     const accountDataSheet = workbook.Sheets[sheetNames[0]];
 
@@ -21,7 +21,7 @@ app.get('/read-excel-users', (req, res) => {
 
 //returns a json of the second sheet
 app.get('/read-excel-books', (req, res) => {
-    const workbook = XLSX.readFile('./account-data.xlsx');
+    const workbook = XLSX.readFile('./src/account-data.xlsx');
     const sheetNames = workbook.SheetNames;
     const listDataSheet = workbook.Sheets[sheetNames[1]];
 
@@ -33,13 +33,13 @@ app.get('/read-excel-books', (req, res) => {
 app.post('/add-row-users', (req, res) => {
     const newRow = req.body;
 
-    const workbook = XLSX.readFile('./account-data.xlsx');
+    const workbook = XLSX.readFile('./src/account-data.xlsx');
     const sheetNames = workbook.SheetNames;
     const accountDataSheet = workbook.Sheets[sheetNames[0]];
 
     XLSX.utils.sheet_add_json(accountDataSheet, [newRow], { skipHeader: true, origin: -1 });
 
-    XLSX.writeFile(workbook, './account-data.xlsx');
+    XLSX.writeFile(workbook, './src/account-data.xlsx');
     res.json({ status: 'success' });
 });
 
@@ -47,13 +47,13 @@ app.post('/add-row-users', (req, res) => {
 app.post('/add-row-books', (req, res) => {
     const newRow = req.body;
 
-    const workbook = XLSX.readFile('./account-data.xlsx');
+    const workbook = XLSX.readFile('./src/account-data.xlsx');
     const sheetNames = workbook.SheetNames;
     const listDataSheet = workbook.Sheets[sheetNames[1]];
 
     XLSX.utils.sheet_add_json(listDataSheet, [newRow], { skipHeader: true, origin: -1 });
 
-    XLSX.writeFile(workbook, './account-data.xlsx');
+    XLSX.writeFile(workbook, './src/account-data.xlsx');
     res.json({ status: 'success' });
 });
 
@@ -61,7 +61,7 @@ app.post('/add-row-books', (req, res) => {
 app.post('/remove-row-books', (req, res) => {
     const rowToRemove = req.body;
 
-    const workbook = XLSX.readFile('./account-data.xlsx');
+    const workbook = XLSX.readFile('./src/account-data.xlsx');
     const sheetNames = workbook.SheetNames;
     const listDataSheet = workbook.Sheets[sheetNames[1]];
 
@@ -75,7 +75,7 @@ app.post('/remove-row-books', (req, res) => {
     const newSheet = XLSX.utils.json_to_sheet(data);
     workbook.Sheets[sheetNames[1]] = newSheet;
 
-    XLSX.writeFile(workbook, './account-data.xlsx');
+    XLSX.writeFile(workbook, './src/account-data.xlsx');
 
     res.json({ status: 'success', message: 'Row removed' });
 });

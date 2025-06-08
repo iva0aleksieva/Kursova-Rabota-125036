@@ -25,7 +25,6 @@ checkboxes.forEach(checkbox => {
                 selectedGenres.splice(targetIndex, 1)
             }
         }
-        //console.log(selectedGenres) //debug
     })
 })
 

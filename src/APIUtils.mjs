@@ -33,6 +33,7 @@ export async function fetchBooksByGenre(genres) { //returns array with 50 book r
     console.log(foundBooks)
     return foundBooks;
 }
+
 export async function fetchBookDetails(key) {
     const url = `https://openlibrary.org${key}.json`;
     const response = await fetch(url);
